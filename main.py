@@ -23,4 +23,19 @@ def choose_destination():
             user_input_three = input()
 
 choose_destination()
-        
+
+def choose_restaurant():
+    restaurant_one = random.choice(restaurants)
+    print(f"We have selected {restaurant_one} for your restaurant! Does this sound good? Enter y/n:")
+    destinations.remove(restaurant_one)
+    user_input = input()
+    if user_input == "n":
+        restaurant_two = random.choice(destinations)
+        print(f"Oh, sorry you don't like this restaurant. No worries, we can try something else! How about {restaurant_two}? Enter y/n:")
+        destinations.remove(restaurant_two)
+        user_input_two = input()
+        if user_input_two == "n":
+            print(f"Oh, sorry you dont like this restaurant. No worries, we can try something else! There is also {restaurants[0]}? Enter y/n:")
+            user_input_three = input()
+       
+choose_restaurant
