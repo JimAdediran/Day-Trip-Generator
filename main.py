@@ -30,7 +30,7 @@ def choose_restaurant():
     destinations.remove(restaurant_one)
     user_input = input()
     if user_input == "n":
-        restaurant_two = random.choice(destinations)
+        restaurant_two = random.choice(restaurants)
         print(f"Oh, sorry you don't like this restaurant. No worries, we can try something else! How about {restaurant_two}? Enter y/n:")
         destinations.remove(restaurant_two)
         user_input_two = input()
@@ -42,16 +42,32 @@ choose_restaurant()
 
 def choose_transportation():
     transportation_one = random.choice(transportations)
-    print(f"We have selected {transportation_one} for your restaurant! Does this sound good? Enter y/n:")
+    print(f"We have selected {transportation_one} for your transportation! Does this sound good? Enter y/n:")
     destinations.remove(transportation_one)
     user_input = input()
     if user_input == "n":
         transportation_two = random.choice(destinations)
-        print(f"Oh, sorry you don't like this restaurant. No worries, we can try something else! How about {transportation_two}? Enter y/n:")
+        print(f"Oh, sorry you don't like this transportation. No worries, we can try something else! How about {transportation_two}? Enter y/n:")
         destinations.remove(transportation_two)
         user_input_two = input()
         if user_input_two == "n":
-            print(f"Oh, sorry you dont like this restaurant. No worries, we can try something else! There is also {transportations[0]}? Enter y/n:")
+            print(f"Oh, sorry you dont like this transportation. No worries, we can try something else! There is also {transportations[0]}? Enter y/n:")
             user_input_three = input()
 
 choose_transportation()
+
+def choose_entertainment():
+    entertainment_one = random.choice(entertainments)
+    print(f"We have selected {entertainment_one} for your entertainment! Does this sound good? Enter y/n:")
+    destinations.remove(entertainment_one)
+    user_input = input()
+    if user_input == "n":
+        entertainment_two = random.choice(entertainments)
+        print(f"Oh, sorry you don't like this entertainment. No worries, we can try something else! How about {entertainment_two}? Enter y/n:")
+        destinations.remove(entertainment_two)
+        user_input_two = input()
+        if user_input_two == "n":
+            print(f"Oh, sorry you dont like this entertainment. No worries, we can try something else! There is also {entertainments[0]}? Enter y/n:")
+            user_input_three = input()
+
+choose_entertainment()
